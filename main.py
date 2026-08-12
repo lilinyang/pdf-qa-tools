@@ -12,7 +12,7 @@ MAX_HISTORY_ROUNDS = 10  # 最多保留 10 轮对话
 
 with st.sidebar:
     openai_api_key = st.text_input("请输入DashScope API密钥（通义千问）：", type="password")
-    st.markdown("[获取DashScope API Key](https://dashscope.console.aliyun.com/apiKey)")
+    st.markdown("[获取DashScope API Key](https://bailian.console.aliyun.com/cn-beijing?tab=model#/api-key)")
 
 # --- 初始化 session_state ---
 if "chat_history" not in st.session_state:
