@@ -132,7 +132,7 @@ import time
 class DashScopeEmbeddings(Embeddings):
     """DashScope Embeddings 封装（兼容 LangChain 接口）"""
 
-    def __init__(self, api_key, model="text-embedding-v3"):
+    def __init__(self, api_key, model="text-embedding-v4"):
         self.client = OpenAI(
             api_key=api_key,
             base_url="https://dashscope.aliyuncs.com/compatible-mode/v1",
@@ -222,7 +222,7 @@ def ask_question(question, retriever, api_key, chat_history=None):
       - retrieved_docs: 检索到的相关文档列表
     """
     llm = ChatOpenAI(
-        model="qwen-plus",
+        model="qwen3.7-plus",
         openai_api_key=api_key,
         openai_api_base="https://dashscope.aliyuncs.com/compatible-mode/v1",
         temperature=0.5,
